@@ -1,0 +1,16 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "angularjs learning project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Domanski",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-resource": "^1.7.5",
+    "angular-route": "^1.7.5"
+  }
+}

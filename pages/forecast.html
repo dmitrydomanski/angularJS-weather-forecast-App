@@ -1,0 +1,29 @@
+<div ng-controller="forecastController">
+    <h1>Forecast page</h1>
+    <h3 style="margin: 10px 5px 30px 5px">Forecast for {{ city }}</h3>
+    <a href="#">Back to search</a>
+    <hr />
+    Entries :
+            <a href="#!/forecast/10" ng-class="{'breadcrumb-item active': entries == 10}">10</a> |
+            <a href="#!/forecast/20" ng-class="{'breadcrumb-item active': entries == 20}">20</a> |
+            <a href='#!/forecast/30' ng-class="{'breadcrumb-item active': entries == 30}">30</a>
+    <hr />
+    <div ng-if="weatherResult">
+        <div style="display: flex; flex-wrap: wrap">
+            <div ng-repeat="w in weatherResult.list">
+                <div class="col-md-12">
+                    <div class="card border-primary mb-3" style="max-width: 17rem;">
+                        <div class="card-header">
+                            <h4 class="card-title">{{ w.dt*1000 | date:"MM/dd/yyyy 'at' h:mma" }}</h3>
+                        </div>
+                        <div class="card-body text-primary">
+                            <div class="card-text">
+                                Daytime temperature: {{ (w.main.temp - 273.15).toFixed() }}&#176;C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
